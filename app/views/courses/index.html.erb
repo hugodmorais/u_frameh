@@ -5,28 +5,18 @@
 </div>
 
 <div class="row">
-    <div class="col s6 m6">
-        <div class="card blue-grey lighten-2">
-        <div class="card-content white-text">
-            <span class="card-title">CS111</span>
-            <p>Name: Intro to Computer Science</p>
+    <% @courses.each do |course| %>
+        <div class="col s6 m6">
+            <div class="card blue-grey lighten-2">
+            <div class="card-content white-text">
+                <span class="card-title"><%= course.short_name %>: <%= course.name %></span>
+                <p><%= course.description %></p>
+            </div>
+            <div class="card-action">
+                <a href="#">Enroll</a>
+                <a href="#">Info</a>
+            </div>
+            </div>
         </div>
-        <div class="card-action">
-            <a href="#">Enroll</a>
-            <a href="#">Info</a>
-        </div>
-        </div>
-    </div>
-    <div class="col s6 m6">
-        <div class="card blue-grey lighten-2">
-        <div class="card-content white-text">
-            <span class="card-title">CS112</span>
-            <p>Name: Intro to Computer Science</p>
-        </div>
-        <div class="card-action">
-            <a href="#">Enroll</a>
-            <a href="#">Info</a>
-        </div>
-        </div>
-    </div>
+    <% end %>
 </div>
