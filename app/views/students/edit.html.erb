@@ -1,6 +1,4 @@
 <% if @student.errors.any? %>
-    <%= pluralize(@student.errors.count, "error") %>
-    prohibited your profile from being created
     <ul>
         <% @student.errors.full_messages.each do |message| %>
             <li>
@@ -14,7 +12,7 @@
     <div class="row center sign-up-form">
         <div class="col s12 m12 l12">
             <div class="card-panel">
-                <h3 class="header">Sign_up!</h3>
+                <h3 class="header">Edit</h3>
                 <div class="row">
                     <%= render 'students/form' %>
                 </div>
