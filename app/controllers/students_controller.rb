@@ -1,4 +1,6 @@
 class StudentsController < ApplicationController
+    before_action :set_student, only: [:edit, :show, :update, :destroy]
+
     def index
         @students = Student.all
     end
@@ -27,6 +29,10 @@ class StudentsController < ApplicationController
     end
 
     private
+
+    def set_student
+        @student = Student.find(params[:id])
+    end
 
     def student_params
         params.require(:student).permit(:name, :email)
