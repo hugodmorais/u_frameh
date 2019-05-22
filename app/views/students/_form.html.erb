@@ -6,14 +6,14 @@
         </div> 
     </div>   
     <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s12 active">
             <%= f.email_field :email, placeholder: "Enter your email address" %>
-            <%= f.label :email %>
+            <%= f.label :email, class: 'active' %>
         </div>   
     </div>
     <div class="row">
         <div class="input-field col s12">   
-            <%= f.submit "Sign Up", class: "btn teal darken-1 waves-effect waves-light right" %>
+            <%= f.submit "Save", class: "btn teal darken-1 waves-effect waves-light right" %>
         </div>
     </div>
 <% end %>

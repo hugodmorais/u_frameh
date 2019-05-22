@@ -8,13 +8,13 @@
     <% @students.each do |student| %>
         <div class="col s6 m6">
             <div class="card blue-grey lighten-2">
-            <div class="card-content white-text">
-                <span class="card-title">Name: <%= student.name %></span>
-                <p>Email: <%= student.email %></p>
-            </div>
-            <div class="card-action">
-                <a href="#">View Profile</a>
-            </div>
+                <div class="card-content white-text">
+                    <span class="card-title">Name: <%= student.name %></span>
+                    <p>Email: <%= student.email %></p>
+                </div>
+                <div class="card-action">
+                    <%= link_to "View Profile", student_path(student) %>
+                </div>
             </div>
         </div>
     <% end %>
